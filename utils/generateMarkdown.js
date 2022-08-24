@@ -94,6 +94,57 @@ My github profile is:
 My email is: 
 [${data.email}](mailto:${data.email})
   ${/*github username with link to github profile email with instructions on how to reach me with additional questions*/""}
+=======
+  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
+  
+  ## Description
+
+    ${data.description}
+
+    ${data.motivation}
+
+    ${data.purpose}
+
+    ${data.problemSolve}
+
+    ${data.learn}
+
+
+  ## Table of Contents 
+
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+
+
+
+  ## Installation
+
+  Steps required to install your project: 
+
+    ${data.installation}
+
+  ## Usage
+
+  Find below instructions and examples for project use. 
+
+    ${data.usage}
+  
+  ## License 
+
+  This project uses ${data.license}. For more information on licenses please 
+  click [here](https://choosealicense.com/).
+
+  ## Contributing
+
+  
+      //contributing
+      //tests
+      //questions
+          //github username with link to github profile
+          //email with instructions on how to reach me with additional questions
+>>>>>>> 27df302950eb02bdb4e9d613715f68865eafa289
 `;
 }
 
