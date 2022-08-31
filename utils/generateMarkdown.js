@@ -27,10 +27,29 @@ function renderLicenseSection(license) {
   } else {
     return `## License 
 
-  This project is covered under ${license}. For more information on licenses please 
-  click [here](https://choosealicense.com/).`
+This project is covered under ${license}. For more information on licenses please 
+click [here](https://choosealicense.com/).`
   }
   
+}
+
+function contributingSection(instructions) {
+
+  if (!instructions) {
+    return `I am currently not taking contributions from other developers right now, but please feel free to contact me with questions.`
+  } else {
+    return `Like what you see? Here are guidelines for how you can contribute to this project:
+    ${instructions}`
+  }
+
+  // if (contribution) {
+  //   return `Like what you see? Here are guidelines for how you can contribute to this project:
+  //   ${instructions}`
+  // } else if (!contribution) {
+  //  instructions = 
+  // } else {
+  //   instructions = `Please find my contact information in "Questions" section of this README`
+  // }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -56,9 +75,10 @@ ${data.confirmDescription === false ? data.motivation : ""}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 ${renderLicenseLink(data.license)}
-
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [Questions](#questions)
 
 
 ## Installation
@@ -75,9 +95,9 @@ ${data.usage}
 
 ${renderLicenseSection(data.license)}
 
-## Contributing
+## Contribution
 
-${data.contributing}
+${contributingSection(data.contribution)}
 
 ## Tests
 
@@ -87,64 +107,14 @@ ${data.tests}
 
 ## Questions
 
-Thank you so much for taking interest in this project. If you have any questions or feedback please reach out me: 
+Thank you so much for taking interest in this project. If you have any questions or feedback please reach out to me: 
 
 My github profile is: 
 [GitHub Link](https:///github.com/${data.githubUsername})
+
 My email is: 
 [${data.email}](mailto:${data.email})
   ${/*github username with link to github profile email with instructions on how to reach me with additional questions*/""}
-=======
-  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
-  
-  ## Description
-
-    ${data.description}
-
-    ${data.motivation}
-
-    ${data.purpose}
-
-    ${data.problemSolve}
-
-    ${data.learn}
-
-
-  ## Table of Contents 
-
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
-  - [License](#license)
-
-
-
-  ## Installation
-
-  Steps required to install your project: 
-
-    ${data.installation}
-
-  ## Usage
-
-  Find below instructions and examples for project use. 
-
-    ${data.usage}
-  
-  ## License 
-
-  This project uses ${data.license}. For more information on licenses please 
-  click [here](https://choosealicense.com/).
-
-  ## Contributing
-
-  
-      //contributing
-      //tests
-      //questions
-          //github username with link to github profile
-          //email with instructions on how to reach me with additional questions
->>>>>>> 27df302950eb02bdb4e9d613715f68865eafa289
 `;
 }
 

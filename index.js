@@ -13,38 +13,38 @@ const questions = [
     {
       type: 'confirm',
       name: 'confirmDescription',
-      message: 'Would you like prompts to guide you through a short description of your project?',
+      message: 'Would you like prompts to guide you through writing a short description of your project?',
     },
     {
       type: 'input',
       name: 'description',
       message: 'Please describe the what, why and how of your project.',
-      when: answers => answers.confirmDescription === true
+      when: answers => answers.confirmDescription === false
     },
     
     {
       type: 'input',
       name: 'motivation',
       message: 'What was your motivation in creating this project?',
-      when: answers => answers.confirmDescription === false
+      when: answers => answers.confirmDescription === true
     },
     {
       type: 'input',
       name: 'purpose',
       message: 'Why did you build this project?',
-      when: answers => answers.confirmDescription === false
+      when: answers => answers.confirmDescription === true
     },
     {
       type: 'input',
       name: 'problemSolve',
       message: 'What problem does your project solve?',
-      when: answers => answers.confirmDescription === false
+      when: answers => answers.confirmDescription === true
     },
     {
       type: 'input',
       name: 'learn',
       message: 'What did you learn while creating this project?',
-      when: answers => answers.confirmDescription === false
+      when: answers => answers.confirmDescription === true
     },
     {
       type: 'input',
@@ -54,7 +54,7 @@ const questions = [
     {
       type: 'input',
       name: 'usage',
-      message: 'Please provide instructions and examples for use of your application. Include screenshots as needed.',
+      message: 'Please provide instructions and examples for use of your application.',
     },
     {
       type: 'list',
@@ -71,6 +71,7 @@ const questions = [
       type: 'input',
       name: 'contribution',
       message: 'Please include guidelines for how someone can contribute to your project.',
+      when: answers => answers.confirmContribution === true,
     },
     {
       type: 'input',
