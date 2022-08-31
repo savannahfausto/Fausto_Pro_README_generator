@@ -1,25 +1,25 @@
 # title
 
-![badge](https://img.shields.io/badge/license-MIT-brightgreen)
+
 
 ## Description
 
+descritpion
 
 
-undefined
 
-descrption
 
-undefined
 
-undefined
+
+
+
 
 
 ## Table of Contents 
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+
 - [Contribution](#contribution)
 - [Tests](#tests)
 - [Questions](#questions)
@@ -37,15 +37,11 @@ Find below instructions and examples for project use.
 
 instructions
 
-## License 
 
-This project is covered under MIT. For more information on licenses please 
-click [here](https://choosealicense.com/).
 
 ## Contribution
 
-Like what you see? Here are guidelines for how you can contribute to this project:
-    guidelines
+I am currently not taking contributions from other developers right now, but please feel free to contact me with questions.
 
 ## Tests
 

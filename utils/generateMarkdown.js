@@ -16,7 +16,6 @@ function renderLicenseLink(license) {
   } else {
     return `- [License](#license)`
   }
-
 }
 
 // TODO: Create a function that returns the license section of README
@@ -30,26 +29,15 @@ function renderLicenseSection(license) {
 This project is covered under ${license}. For more information on licenses please 
 click [here](https://choosealicense.com/).`
   }
-  
 }
 
 function contributingSection(instructions) {
-
   if (!instructions) {
     return `I am currently not taking contributions from other developers right now, but please feel free to contact me with questions.`
   } else {
     return `Like what you see? Here are guidelines for how you can contribute to this project:
     ${instructions}`
   }
-
-  // if (contribution) {
-  //   return `Like what you see? Here are guidelines for how you can contribute to this project:
-  //   ${instructions}`
-  // } else if (!contribution) {
-  //  instructions = 
-  // } else {
-  //   instructions = `Please find my contact information in "Questions" section of this README`
-  // }
 }
 
 // TODO: Create a function to generate markdown for README
@@ -60,15 +48,15 @@ ${renderLicenseBadge(data.license)}
 
 ## Description
 
-${data.confirmDescription === true ? data.description : ""}
-
-${data.confirmDescription === false ? data.motivation : ""}
-
 ${data.confirmDescription === false ? data.description : ""}
 
-${data.confirmDescription === false ? data.motivation : ""}
+${data.confirmDescription === true ? data.motivation : ""}
 
-${data.confirmDescription === false ? data.motivation : ""}
+${data.confirmDescription === true ? data.purpose : ""}
+
+${data.confirmDescription === true ? data.problemSolve : ""}
+
+${data.confirmDescription === true ? data.learn : ""}
 
 
 ## Table of Contents 
