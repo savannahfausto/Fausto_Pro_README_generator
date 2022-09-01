@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Returns a license badge based on which license is passed in
+// If user selects 'none' for license, return an empty string
 function renderLicenseBadge(license) {
   if (license === 'none') {
         return "";
@@ -8,8 +8,8 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Returns the license link in table of contents
+// If user selects 'none' for license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'none') {
     return "";
@@ -18,7 +18,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// Returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license === 'none') {
@@ -31,16 +31,21 @@ click [here](https://choosealicense.com/).`
   }
 }
 
+// Returns instructions on how another developer can contribute to the project if contributions are accepted
 function contributingSection(instructions) {
+  //if no instructions are given
   if (!instructions) {
     return `I am currently not taking contributions from other developers right now, but please feel free to contact me with questions.`
   } else {
+    //if instructions are given
     return `Like what you see? Here are guidelines for how you can contribute to this project:
     ${instructions}`
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// Generates markdown for README
+// Formatted to be inline with the function so that the README.md file generates in a proper format without indentation
+// Previous functions called on by placing the function and its arguments in template literals
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -102,8 +107,8 @@ My github profile is:
 
 My email is: 
 [${data.email}](mailto:${data.email})
-  ${/*github username with link to github profile email with instructions on how to reach me with additional questions*/""}
 `;
 }
 
+// Exports this function to be able to use in index.js
 module.exports = generateMarkdown;

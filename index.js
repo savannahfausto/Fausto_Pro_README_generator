@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// Array of questions that user will be asked when types in node index to the terminal
 const questions = [
     {
       type: 'input',
@@ -15,13 +15,14 @@ const questions = [
       name: 'confirmDescription',
       message: 'Would you like prompts to guide you through writing a short description of your project?',
     },
+    //If user does not want prompts, they will be asked a general question to describe their project
     {
       type: 'input',
       name: 'description',
       message: 'Please describe the what, why and how of your project.',
       when: answers => answers.confirmDescription === false
     },
-    
+    //If a user does want prompts, they will be asked specific questions to render a more specific description of their project
     {
       type: 'input',
       name: 'motivation',
@@ -56,6 +57,7 @@ const questions = [
       name: 'usage',
       message: 'Please provide instructions and examples for use of your application.',
     },
+    //If user selects none, based on the generateMarkdown.js file, no license badge or section will be rendered in the README
     {
       type: 'list',
       name: 'license',
@@ -67,6 +69,7 @@ const questions = [
       name: 'confirmContribution',
       message: 'Would you like to allow others to contribute to your project?',
     },
+    //When a user wants to accept contributions from other developers this question will be asked of the user
     {
       type: 'input',
       name: 'contribution',
@@ -92,7 +95,7 @@ const questions = [
 ];
 
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         if (err) {
@@ -102,14 +105,14 @@ function writeToFile(fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     inquirer
         .prompt(questions)
         .then(answers => {
-            writeToFile('README.md', generateMarkdown(answers));
+            writeToFile('testREADME.md', generateMarkdown(answers));
         })
 }
 
-// Function call to initialize app
+// Invoke init to initialize app
 init();
