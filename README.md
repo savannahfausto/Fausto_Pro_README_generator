@@ -12,6 +12,6 @@ This is accomplished by using the inquirer package to create the prompts the use
 
 Once the file is created, the users answers are dynamically populated into a README.md file using template literals. These template literals are used to directly insert a user's input into the README.md. They are also used to invoke functions within the template literal, based on the user's input/preferences. This is particularly seen with the license section of the README.md: 
 
-The user is asked what type of license, if any, they are using for their project. If the user does not choose a license, a badge at the top of the README is not create nor a license section in the README. 
+The user is asked what type of license, if any, they are using for their project. If the user does not choose a license, a badge at the top of the README is not create nor a license section in the README. If the user does choose a license, then a badge is generated and displayed toward the top of the README.md file and a license section is populated into the file as well.
 
 ## Link to Professional README Generator Walkthrough Video
