@@ -79,7 +79,7 @@ const questions = [
     {
       type: 'input',
       name: 'tests',
-      message: 'Writes tests for your application. Then provide exsamples on how to run them here.',
+      message: 'Writes tests for your application. Then provide examples on how to run them here.',
     },
     {
       type: 'input',

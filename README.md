@@ -21,4 +21,4 @@ For example, if the user is asked: What is the purpose of this project?
 It would be better for the user to start their response with, "The Purpose of this project is...," instead of something like, "To create a README.md file." The first response gives context and makes for a better README.md file, the second response does not.
 
 ## Link to Professional README Generator Walkthrough Video
-[Professional README Generator Walkthrough Video]()
+[Professional README Generator Walkthrough Video](https://drive.google.com/file/d/1EkXSLxuMhHp3slM9LL5m4OCpytrMqT1W/view)
